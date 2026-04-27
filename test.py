@@ -41,6 +41,10 @@ print(int_type)
 print(float_type)
 """
 
+"""
+法三：查看数据类型
 name = "你好，世界"
 string_type = type(name)
 print(string_type)
+"""
+
