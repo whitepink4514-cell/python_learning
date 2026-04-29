@@ -6,8 +6,12 @@
 #num = 1 + 2 * 3
 #num += 1
 #print("num的值为:" , num )
-
+"""
 num = 9 // 2
 num_1 = 9//4
 num_3 = 13.5 // 2
 print(num , num_1 , num_3)
+向下取整的
+"""
+
+#字符串拓展内容
