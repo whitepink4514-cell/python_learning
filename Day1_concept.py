@@ -97,6 +97,7 @@ print(a,b,c)
 
 
 #单引号定义字符串时，如果字符串中包含单引号，需要使用转义字符\来表示单引号
+#(\'表示单引号；\"表示双引号；\n代表换行符，开始新的一行；\t相当于Tab)
 """
 s1 = 'It\'s a nice day'
 
@@ -106,22 +107,38 @@ print(s1)
 """
 s2 = "Hello\n\tWorld"
 print(s2)
-print("欢迎大家进入到python课程的学习！\n\t大家记得要坚持每天学习哦！")
+print("\t欢迎大家进入到python课程的学习！\n\t大家记得要坚持每天学习哦！")
+"""
+#""""""""不可以嵌套使用
 
-"""
-Example = """
-Hello:
-    欢迎大家进入python的学习
-    大家一起加油
-        好吧
-"""
-print(Example)
+# Example = """
+# Hello:
+#     欢迎大家进入python的学习
+#     大家一起加油
+#         好吧
+# """
+
+# print(Example)
+
+
+
 
 """
 print(type("Hello"))    #str类型
 print(type(Hello))      #未定义类型
 print(type(None))
 """
+
+"""
+
+name = "涛哥"
+age = 18
+major = "软件工程"
+hobby = "python , Java"
+print(f"大家好，我是{name},今年{age}岁，学习的专业是{major}，爱好是{hobby}")
+
+"""
+
 
 #字符串的拼接：使用加号（+）运算符可以将多个字符串连接在一起，形成一个新的字符串
 # +号可以用来拼接两个字符串，但是无法将非字符串与字符串进行拼接（非字符串类型需要转换为字符串类型）
@@ -178,14 +195,20 @@ major = "软件工程"
 hobby = "python、Java"
 print(f"大家好，我的名字是{name},今年{age}岁，我的专业是{major}，同时我的爱好是{hobby}")
 
-
+"""
+#input语句（函数）的功能是获取键盘输入的数据，具体的功能为：s = input(提示信息)
+#print语句（函数）的功能是将数据输出到控制台，具体语法为：print(数据~)
+"""
 name = input("请输入你的名字")
 age = input("请输入您的年龄")
 print(f"欢迎您，{name}，您今年{age}岁啦！")
 """
 
+
 #小智银行卡中有1万元，现在到ATM进行取钱操作，请根据输入的金额执行取钱操作，取钱完毕后，展示其银行卡余额
 #因为键盘输入的都是字符串类型，而balance是int类型，不能直接减
+
+
 """
 
 balance = 10000
@@ -217,7 +240,7 @@ print("10 / 4 = ",10/4)
 print("10 // 4 = ",10//4)
 print("10 ** 4 = ",10**4)
 """
-
+#
 #算数运算的优先级为 ** --> * / // %  --> + -
 #要求输入两个数x和y，分别输出x+y和x-y的结果
 """
@@ -245,11 +268,18 @@ print(f"梯形的面积为{(up_length + down_length ) * tall_length / 2}")
 
 #案例3：要求输入圆的半径，然后计算圆的周长和面积（周长：2*pi*r , 面积：pi * r **2）
 """
-pi = 3.14
+import math
+print(math.pi)
 radius = float(input("请输入圆的半径"))
-perimeter = 2 * pi * radius
-area = pi * radius ** 2
+perimeter = 2 * math.pi * radius
+area = math.pi * radius ** 2
 print(f"圆的周长为{perimeter}，圆的面积为{area}")
 
 """
 
+#身体质量指数BMI的计算（BMI = 体重(kg) / 身高（m）^2）
+
+weight = float(input("输入体重(kg)"))
+height = float(input("输入身高(m)"))
+BMI = weight / (height**2)
+print(f"身体质量指数BMI结果为：{BMI}")
